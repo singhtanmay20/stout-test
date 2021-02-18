@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Plots Case 2</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+	<!-- One -->
+	<section id="one" class="wrapper special">
+		<div class="inner">
+
+			<header class="major">
+				<h2><b>Case Study 2</b></h2>
+			</header>
+
+			<div class="case1">
+					<h3><b>Total Revenue For Current Year</b></h3>
+						<p>The total revenue for current year is calculated by grouping the original dataset by year and taking the sum of net revenue.</p>
+						<p>total revenue in year 2017   :   31417495.02999995</p>
+
+					<h3><b>New Customers Revenue</b></h3>
+						<p>The new customers revenue is calculated by doing a left join on customers_email of rows of original datasets seperated by current and prev year and then using the join to select customers present only in current year since they were not present in the previous year.</p>
+						<p>New customers revenue in year 2017   :   28776235.039999995</p>
+
+					<h3><b>Existing Customers Growth</b></h3>
+						<p>The Existing customers growth is calculated by doing a left join on customers_email on rows of original datasets seperated by current and prev year and then select rows present in both. Then we use the join to select sum of net revenues based on current year and previous year. after this we subtract the previous revenue by current to get the growth.</p>
+						<p>Existing customers growth in year: 2017   :   20611.340000000317</p>
+
+					<h3><b>Revenue Lost from Attrition</b></h3>
+						<p>The revenue lost from attrition is calculated by doing a right join on customers_email on rows of original datasets seperated by current and prev year and then select rows present ionly in previous year. By taking the sum of net revenue we the loss. since this customers are not present in current year.</p>
+						<p>Revenue lost from attrition in year 2017   :    25730943.590000004</p>
+
+					<h3><b>Existing Customer Revenue Current Year</b></h3>
+						<p>The existing customer revenue in current year is calculated by doing a left join on customers_email on rows of original datasets seperated by current and prev year and then selecting rows present in both the years. by taking the sum of revenue of customers present in current year we get the desired result.</p>
+						<p>Existing customer revenue in year 2017  :   2641259.99</p>
+
+					<h3><b>Existing Customer Revenue Prior Year</b></h3>
+						<p>The existing customer revenue in prior year is calculated by doing a left join on customers_email on rows of original datasets seperated by current and prev year and then selecting rows present in both the years. by taking the sum of revenue of customers present in prior year we get the desired result.</p>
+						<p>Existing customer revenue in year 2016   :   2620648.65
+</p>
+
+					<h3><b>Total Customers Current Year</b></h3>
+						<p>The total customers in current year is calculated by grouping the original dataset by year and taking a count of net revenue present in current year.</p>
+						<p>Total Customers in Year 2017   :   249987</p>
+
+					<h3><b>Total Customers Previous Year</b></h3>
+						<p>The total customers in previous year is calculated by grouping the original dataset by year and taking a count of net revenue present in previous year.</p>
+						<p>Total Customers in Year 2016   :   204646</p>
+
+					<h3><b>Total New Customers</b></h3>
+						<p>total new customers in current year is calculated by doing a left join on customers_email on rows of original datasets seperated by current and prev year and then selecting rows present only in current year. by doing a count of all the rows present we get the total number of new customers</p>
+						<p>total new customers in 2017   :  229028</p>
+
+					<h3><b>Total Lost Customers</b></h3>
+						<p>total lost customers in current year is calculated by doing a right join on customers_email on rows of original datasets seperated by current and prev year and then selecting rows present only in previous year. by doing a count of all the rows present we get the total number of lost customers</p>
+						<p>total lost customers in 2017   :  183687</p>
+
+
+			</div>
+		</div>
+	</section>
+</body>
